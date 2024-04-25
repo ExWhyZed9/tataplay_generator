@@ -49,7 +49,7 @@ const getUserChanDetails = async (userChannels) => {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        hmacValue = data.data.hmac.hdtl.value;
+        hmacValue = data.data.hmac.hdnea.value;
     } catch (error) {
         console.error('Error fetching and rearranging HMAC data:', error);
         obj.err = error;
