@@ -38,7 +38,7 @@ const getUserChanDetails = async () => {
                     hmac_required: null,
                     key_extracted: null,
                     pssh: channel.pssh,
-                    clearkey: channel.clearkeys_base64.keys ? JSON.stringify(channel.clearkeys_base64.keys) : null,
+                    clearkey: channel.clearkeys_base64 ? JSON.stringify(channel.clearkeys_base64) : null,
                     hma: hmacValue
                 };
                 obj.list.push(rearrangedChannel);
