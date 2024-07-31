@@ -7,9 +7,9 @@ const getUserChanDetails = async () => {
     let obj = { list: [] };
 
     try {
-        const responseHmac = await fetch("https://lust.toxicify.pro/api/toxicify.json");
+        const responseHmac = await fetch("https://lust.toxicify.pro/api/1");
         const data = await responseHmac.json();
-        hmacValue = data.cookie;
+        hmacValue = data.mpd_cookie && data.mpd_cookie.length > 0 ? data.mpd_cookie.split('|')[1].split(':')[1] : null;
     } catch (error) {
         console.error('Error fetching and rearranging HMAC data:', error);
         return obj;
