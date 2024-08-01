@@ -7,9 +7,10 @@ const getUserChanDetails = async () => {
     let obj = { list: [] };
 
     try {
-        const responseHmac = await fetch("https://lust.toxicify.pro/api/1");
+        const responseHmac = await fetch("https://fox.toxic-gang.xyz/tata/hmac");
         const data = await responseHmac.json();
-        hmacValue = data.mpd_cookie && data.mpd_cookie.length > 0 ? data.mpd_cookie.split('|')[1].split(':')[1] : null;
+        const hmacData = data[0];
+        hmacValue = hmacData.data.hdntl;
     } catch (error) {
         console.error('Error fetching and rearranging HMAC data:', error);
         return obj;
