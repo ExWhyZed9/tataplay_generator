@@ -7,8 +7,6 @@ const hexToBase64 = (hex) => {
         const bytes = Buffer.from(hex, 'hex');
         let base64 = bytes.toString('base64');
         
-        base64 = base64.replace(/\+/g, '-').replace(/\//g, '_');
-        
         base64 = base64.replace(/=*$/, '');
         console.log(`Hex to Base64 conversion: ${hex} -> ${base64}`);
         return base64;
