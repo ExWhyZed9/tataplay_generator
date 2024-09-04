@@ -9,10 +9,7 @@ export default function Home() {
 
   useEffect(() => {
   const url = window.location.origin.replace('localhost', '127.0.0.1') +
-    '/api/getM3u?sid=' + 'tplay' +
-    '_A&id=' + '123456789' +
-    '&sname=' + 'tataP' +
-    '&tkn=' + 'xeotpxyastrplg';
+    '/api/getM3u';
 
   setDynamicUrl(url);
 }, []);
@@ -24,7 +21,7 @@ export default function Home() {
       redirect: 'follow'
     };
 
-    fetch(window.location.origin + '/api/getM3u?sid=' + 'tplay' + '_' + 'A' + '&id=' + '123456789' + '&sname=' + 'tataP' + '&tkn=' + 'xeotpxyastrplg', requestOptions)
+    fetch(window.location.origin + '/api/getM3u', requestOptions)
       .then(response => response.text())
       .then(result => {
         console.log(result);
