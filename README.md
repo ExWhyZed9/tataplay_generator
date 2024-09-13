@@ -1,5 +1,5 @@
 # Tata Sky m3u generator web app
-This project is totally based on CodeCrafters API.
+This project is totally based on TeamBabel API.
 
 A react web app to generate an m3u playlist for the channels Available on Tata Sky.
 
@@ -18,7 +18,7 @@ a) npm install<br>
 b) npm run dev
 3) Enjoy!
 
-**Note : **use this playlist on OTT Navigator and set to reload data to 04 Hours bcz hmac expires in every 04 Hours for most of channels.           
+**Note : **use this playlist on OTT Navigator and set to reload data to 10 Minutes bcz keys might expires in every 10 Minutes for most of channels.           
         
-Special thanks to CodeCrafters for their API.
+Special thanks to TeamBabel for their API.
 
